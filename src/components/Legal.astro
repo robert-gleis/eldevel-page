@@ -1,0 +1,90 @@
+---
+import { content } from '../content/de.ts';
+---
+
+<!-- Legal Section -->
+<section id="rechtliches" class="section-sm bg-gray-50 dark:bg-gray-800/50">
+  <div class="container-custom">
+    <div class="text-center space-y-4 mb-12">
+      <h2>Rechtliches</h2>
+    </div>
+
+    <div class="max-w-4xl mx-auto space-y-6">
+      <!-- Impressum -->
+      <div class="card">
+        <button class="accordion-trigger w-full text-left card-body flex items-center justify-between" data-target="impressum">
+          <h3 class="text-lg font-semibold">{content.legal.imprint.headline}</h3>
+          <svg class="w-5 h-5 transition-transform accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="impressum" class="accordion-content hidden card-body pt-0">
+          <div class="space-y-3 text-gray-600 dark:text-gray-300">
+            <p><strong>{content.legal.imprint.content.company}</strong></p>
+            <p>{content.legal.imprint.content.owner}</p>
+            <p>{content.legal.imprint.content.address}</p>
+            <p>{content.legal.imprint.content.phone}</p>
+            <p>{content.legal.imprint.content.email}</p>
+            <p>{content.legal.imprint.content.form}</p>
+            <p>{content.legal.imprint.content.responsible}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Datenschutz -->
+      <div class="card">
+        <button class="accordion-trigger w-full text-left card-body flex items-center justify-between" data-target="datenschutz">
+          <h3 class="text-lg font-semibold">{content.legal.privacy.headline}</h3>
+          <svg class="w-5 h-5 transition-transform accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="datenschutz" class="accordion-content hidden card-body pt-0">
+          <div class="space-y-4 text-gray-600 dark:text-gray-300">
+            <p>{content.legal.privacy.intro}</p>
+            {content.legal.privacy.sections.map(section => (
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">{section.title}</h4>
+                <p>{section.content}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Accordion JavaScript -->
+<script>
+  // Accordion functionality
+  const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+  
+  accordionTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const targetId = trigger.getAttribute('data-target');
+      const content = document.getElementById(targetId);
+      const icon = trigger.querySelector('.accordion-icon');
+      
+      if (content && icon) {
+        const isOpen = !content.classList.contains('hidden');
+        
+        // Close all accordions
+        accordionTriggers.forEach(t => {
+          const tContent = document.getElementById(t.getAttribute('data-target'));
+          const tIcon = t.querySelector('.accordion-icon');
+          if (tContent && tIcon) {
+            tContent.classList.add('hidden');
+            tIcon.style.transform = 'rotate(0deg)';
+          }
+        });
+        
+        // Open clicked accordion if it was closed
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        }
+      }
+    });
+  });
+</script>

@@ -1,10 +1,17 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import tailwindcss from "@tailwindcss/vite"
+import sitemap from '@astrojs/sitemap';
+import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-	vite: {
-		plugins: [tailwindcss()],
+	site: 'https://eldevel.github.io',
+	output: 'static',
+	integrations: [
+		sitemap(),
+		tailwind()
+	],
+	image: {
+		domains: ['eldevel.github.io'],
 	},
 });

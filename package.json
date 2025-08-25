@@ -1,7 +1,8 @@
 {
-  "name": "landing-page",
+  "name": "eldevel-landing",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "Modern landing page for eldevel - Electronics Development",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,8 +10,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.11",
+    "@astrojs/sitemap": "^3.0.0",
+    "@astrojs/tailwind": "^5.1.2",
+    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.15",
     "astro": "^5.12.9",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^3.4.14"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21"
   }
 }

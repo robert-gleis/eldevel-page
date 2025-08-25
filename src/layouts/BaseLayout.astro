@@ -1,0 +1,120 @@
+---
+import Layout from './Layout.astro';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <slot />
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "name": "eldevel – Electronics Development",
+      "alternateName": "eldevel",
+                     "image": [
+                 "https://eldevel.github.io/images/eldevel-logo.png",
+                 "https://eldevel.github.io/images/hero-pcb.jpg",
+                 "https://eldevel.github.io/images/portrait.jpg"
+               ],
+      "description": "Professionelle Elektronik-Entwicklung von der Idee bis zur Serie. PCB-Design, Prototyping, Tests und Produktbegleitung mit über 20 Jahren Erfahrung.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lise-Meitner-Straße 2",
+        "addressLocality": "Flensburg",
+        "postalCode": "24941",
+        "addressRegion": "Schleswig-Holstein",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 54.7836,
+        "longitude": 9.4321
+      },
+                     "url": "https://eldevel.github.io/",
+      "sameAs": [
+        "https://github.com/eldevel"
+      ],
+      "telephone": "+49-461-49433910",
+      "email": "info@eldevel.de",
+      "faxNumber": "+49-461-49433911",
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": ["Cash", "Credit Card", "Invoice"],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:00",
+        "validFrom": "2011-01-01"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Hans-Jürgen Rode",
+        "jobTitle": "Electronics Developer",
+        "email": "info@eldevel.de",
+        "telephone": "+49-461-49433910",
+        "knowsAbout": [
+          "Electronics Development",
+          "PCB Design",
+          "Altium Designer",
+          "Eagle CAD",
+          "EMV Testing",
+          "Product Development"
+        ]
+      },
+      "employee": {
+        "@type": "Person",
+        "name": "Hans-Jürgen Rode"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Germany"
+      },
+      "serviceType": [
+        "Electronics Development",
+        "PCB Design", 
+        "Prototyping",
+        "EMV Testing",
+        "Product Development",
+        "Manufacturing Support"
+      ],
+      "knowsAbout": [
+        "Altium Designer",
+        "Eagle CAD",
+        "PCB Layout",
+        "EMV Testing",
+        "HALT Testing",
+        "ISO 9001:2015"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "ratingCount": "7",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Organization",
+            "name": "WES GmbH"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "reviewBody": "Excellent electronics development services."
+        }
+      ]
+    }
+  </script>
+</Layout>

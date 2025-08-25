@@ -1,22 +1,64 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import '../styles/globals.css';
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "eldevel – Electronics Development", 
+  description = "Professionelle Elektronik-Entwicklung von der Idee bis zur Serie. PCB-Design, Prototyping, Tests und Produktbegleitung." 
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  
+  <!-- SEO Meta Tags -->
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content="Elektronik, PCB, Leiterplatten, Entwicklung, Prototyping, Altium Designer, Eagle, EMV, Tests, Elektronikentwicklung, Flensburg, Hans-Jürgen Rode" />
+  <meta name="author" content="Hans-Jürgen Rode" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="de" />
+             <link rel="canonical" href="https://eldevel.github.io/" />
+           
+           <!-- Open Graph -->
+           <meta property="og:title" content={title} />
+           <meta property="og:description" content={description} />
+           <meta property="og:type" content="website" />
+           <meta property="og:url" content="https://eldevel.github.io/" />
+           <meta property="og:site_name" content="eldevel – Electronics Development" />
+           <meta property="og:image" content="https://eldevel.github.io/images/eldevel-logo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="de_DE" />
+  
+             <!-- Twitter Card -->
+           <meta name="twitter:card" content="summary_large_image" />
+           <meta name="twitter:title" content={title} />
+           <meta name="twitter:description" content={description} />
+           <meta name="twitter:image" content="https://eldevel.github.io/images/eldevel-logo.png" />
+  <meta name="twitter:site" content="@eldevel" />
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#14b8a6" />
+  <meta name="msapplication-TileColor" content="#14b8a6" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="font-sans antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+  <slot />
+</body>
+</html>

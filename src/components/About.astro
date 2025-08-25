@@ -1,0 +1,56 @@
+---
+import { content } from '../content/de.ts';
+---
+
+<!-- About Section -->
+<section id="unternehmen" class="section bg-gray-50 dark:bg-gray-800/50">
+  <div class="container-custom">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      
+      <!-- About Image -->
+      <div class="relative">
+        <div class="relative overflow-hidden rounded-2xl">
+          <img 
+            src="/images/portrait.jpg" 
+            alt="Hans-Jürgen Rode - Elektronikentwickler"
+            class="w-full h-[400px] object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- About Content -->
+      <div class="space-y-6">
+        <div class="space-y-4">
+          <h2>{content.about.headline}</h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300">
+            {content.about.subheadline}
+          </p>
+          <p class="text-gray-600 dark:text-gray-300">
+            {content.about.intro}
+          </p>
+        </div>
+
+        <!-- Experience -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold">{content.about.experience.title}</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            {content.about.experience.description}
+          </p>
+          
+          <!-- Highlights -->
+          <ul class="space-y-2">
+            {content.about.experience.highlights.map(highlight => (
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-300">{highlight}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

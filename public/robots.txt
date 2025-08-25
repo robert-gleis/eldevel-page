@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://eldevel.github.io/landing-page/sitemap-index.xml
+
+# Common bot optimization
+Crawl-delay: 1
+
+# Block access to admin/private areas (if any)
+Disallow: /admin/
+Disallow: /_astro/
+Disallow: /example_assets/
