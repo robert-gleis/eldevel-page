@@ -1,5 +1,13 @@
 ---
 import { content } from '../content/de.ts';
+
+// Helper function to build correct asset paths
+const getAssetPath = (path: string) => {
+  const baseUrl = import.meta.env.BASE_URL;
+  // Remove trailing slash from baseUrl if it exists
+  const cleanBaseUrl = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+  return cleanBaseUrl + '/' + (path.startsWith('/') ? path.slice(1) : path);
+};
 ---
 
 <!-- Hero Section -->
@@ -47,7 +55,7 @@ import { content } from '../content/de.ts';
       <div class="relative">
         <div class="relative overflow-hidden rounded-2xl shadow-2xl">
           <img 
-            src="/images/hero-pcb.jpg" 
+            src={getAssetPath("images/hero-pcb.jpg")} 
             alt="Professionelle PCB-Entwicklung bei eldevel"
             class="w-full h-[400px] lg:h-[500px] object-cover"
             loading="eager"

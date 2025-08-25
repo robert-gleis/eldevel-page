@@ -1,5 +1,13 @@
 ---
 import { content } from '../content/de.ts';
+
+// Helper function to build correct asset paths
+const getAssetPath = (path: string) => {
+  const baseUrl = import.meta.env.BASE_URL;
+  // Remove trailing slash from baseUrl if it exists
+  const cleanBaseUrl = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+  return cleanBaseUrl + '/' + (path.startsWith('/') ? path.slice(1) : path);
+};
 ---
 
 <!-- Footer -->
@@ -10,12 +18,12 @@ import { content } from '../content/de.ts';
       <!-- Company Info -->
       <div class="space-y-4">
         <div class="flex items-center">
-          <img 
-            src="/images/eldevel-logo.png" 
-            alt="eldevel – Electronics Development"
-            class="h-10 w-auto filter brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
-            loading="lazy"
-          />
+                           <img 
+                   src={getAssetPath("images/eldevel-logo.png")} 
+                   alt="eldevel – Electronics Development"
+                   class="h-10 w-auto filter brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
+                   loading="lazy"
+                 />
         </div>
         <p class="text-gray-300">{content.footer.tagline}</p>
       </div>
