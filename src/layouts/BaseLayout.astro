@@ -7,6 +7,11 @@ export interface Props {
 }
 
 const { title, description } = Astro.props;
+
+// Dynamic base URL for different environments
+const baseUrl = import.meta.env.BASE_URL || '/';
+const siteUrl = 'https://robert-gleis.github.io';
+const fullUrl = siteUrl + baseUrl;
 ---
 
 <Layout title={title} description={description}>
@@ -20,9 +25,9 @@ const { title, description } = Astro.props;
       "name": "eldevel – Electronics Development",
       "alternateName": "eldevel",
                      "image": [
-                 "https://eldevel.github.io/images/eldevel-logo.png",
-                 "https://eldevel.github.io/images/hero-pcb.jpg",
-                 "https://eldevel.github.io/images/portrait.jpg"
+                 `${fullUrl}images/eldevel-logo.png`,
+                 `${fullUrl}images/hero-pcb.jpg`,
+                 `${fullUrl}images/portrait.jpg`
                ],
       "description": "Professionelle Elektronik-Entwicklung von der Idee bis zur Serie. PCB-Design, Prototyping, Tests und Produktbegleitung mit über 20 Jahren Erfahrung.",
       "address": {
@@ -38,7 +43,7 @@ const { title, description } = Astro.props;
         "latitude": 54.7836,
         "longitude": 9.4321
       },
-                     "url": "https://eldevel.github.io/",
+                     "url": `${fullUrl}`,
       "sameAs": [
         "https://github.com/eldevel"
       ],

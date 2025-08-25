@@ -10,6 +10,11 @@ const {
   title = "eldevel – Electronics Development", 
   description = "Professionelle Elektronik-Entwicklung von der Idee bis zur Serie. PCB-Design, Prototyping, Tests und Produktbegleitung." 
 } = Astro.props;
+
+// Dynamic base URL for different environments
+const baseUrl = import.meta.env.BASE_URL || '/';
+const siteUrl = 'https://robert-gleis.github.io';
+const fullUrl = siteUrl + baseUrl;
 ---
 
 <!DOCTYPE html>
@@ -27,15 +32,15 @@ const {
   <meta name="author" content="Hans-Jürgen Rode" />
   <meta name="robots" content="index, follow" />
   <meta name="language" content="de" />
-             <link rel="canonical" href="https://eldevel.github.io/" />
+             <link rel="canonical" href={fullUrl} />
            
            <!-- Open Graph -->
            <meta property="og:title" content={title} />
            <meta property="og:description" content={description} />
            <meta property="og:type" content="website" />
-           <meta property="og:url" content="https://eldevel.github.io/" />
+           <meta property="og:url" content={fullUrl} />
            <meta property="og:site_name" content="eldevel – Electronics Development" />
-           <meta property="og:image" content="https://eldevel.github.io/images/eldevel-logo.png" />
+           <meta property="og:image" content={fullUrl + "/images/eldevel-logo.png"} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="de_DE" />
@@ -44,7 +49,7 @@ const {
            <meta name="twitter:card" content="summary_large_image" />
            <meta name="twitter:title" content={title} />
            <meta name="twitter:description" content={description} />
-           <meta name="twitter:image" content="https://eldevel.github.io/images/eldevel-logo.png" />
+           <meta name="twitter:image" content={fullUrl + "/images/eldevel-logo.png"} />
   <meta name="twitter:site" content="@eldevel" />
   
   <!-- Additional SEO -->
