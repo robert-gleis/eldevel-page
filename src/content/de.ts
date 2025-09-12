@@ -12,6 +12,7 @@ export const content = {
     home: "Start",
     company: "Unternehmen", 
     services: "Leistungen",
+    quality: "Qualität",
     process: "Prozess",
     contact: "Kontakt",
     legal: "Rechtliches",
