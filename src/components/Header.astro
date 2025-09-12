@@ -8,6 +8,11 @@ const getAssetPath = (path: string) => {
   const cleanBaseUrl = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
   return cleanBaseUrl + '/' + (path.startsWith('/') ? path.slice(1) : path);
 };
+
+// Check if we're on the homepage to determine link behavior
+const currentPath = Astro.url.pathname;
+const isHomepage = currentPath === '/' || currentPath === '/index.html';
+const linkPrefix = isHomepage ? '' : '/';
 ---
 
 <header class="navbar">
@@ -16,7 +21,7 @@ const getAssetPath = (path: string) => {
       
       <!-- Logo/Brand -->
       <div class="flex items-center">
-        <a href="#" class="flex items-center">
+        <a href="/" class="flex items-center">
           <img 
             src={getAssetPath("images/eldevel-logo.png")} 
             alt="eldevel – Electronics Development"
@@ -28,16 +33,16 @@ const getAssetPath = (path: string) => {
 
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center space-x-8">
-        <a href="#unternehmen" class="nav-link">{content.navigation.company}</a>
-        <a href="#qualitaet" class="nav-link">{content.navigation.quality}</a>
-        <a href="#leistungen" class="nav-link">{content.navigation.services}</a>
-        <a href="#prozess" class="nav-link">{content.navigation.process}</a>
-        <a href="#kontakt" class="nav-link">{content.navigation.contact}</a>
+        <a href={`${linkPrefix}#unternehmen`} class="nav-link">{content.navigation.company}</a>
+        <a href={`${linkPrefix}#qualitaet`} class="nav-link">{content.navigation.quality}</a>
+        <a href={`${linkPrefix}#leistungen`} class="nav-link">{content.navigation.services}</a>
+        <a href={`${linkPrefix}#prozess`} class="nav-link">{content.navigation.process}</a>
+        <a href={`${linkPrefix}#kontakt`} class="nav-link">{content.navigation.contact}</a>
       </nav>
 
       <!-- Desktop CTA -->
       <div class="hidden md:flex items-center">
-        <a href="#kontakt" class="btn-primary">
+        <a href={`${linkPrefix}#kontakt`} class="btn-primary">
           {content.hero.cta_primary}
         </a>
       </div>
@@ -83,15 +88,15 @@ const getAssetPath = (path: string) => {
 
     <!-- Mobile Navigation -->
     <nav class="flex-1 px-4 py-6 space-y-4">
-      <a href="#unternehmen" class="mobile-nav-link">{content.navigation.company}</a>
-      <a href="#leistungen" class="mobile-nav-link">{content.navigation.services}</a>
-      <a href="#prozess" class="mobile-nav-link">{content.navigation.process}</a>
-      <a href="#kontakt" class="mobile-nav-link">{content.navigation.contact}</a>
+      <a href={`${linkPrefix}#unternehmen`} class="mobile-nav-link">{content.navigation.company}</a>
+      <a href={`${linkPrefix}#leistungen`} class="mobile-nav-link">{content.navigation.services}</a>
+      <a href={`${linkPrefix}#prozess`} class="mobile-nav-link">{content.navigation.process}</a>
+      <a href={`${linkPrefix}#kontakt`} class="mobile-nav-link">{content.navigation.contact}</a>
     </nav>
 
     <!-- Mobile Footer -->
     <div class="p-4 border-t border-gray-200">
-      <a href="#kontakt" class="btn-primary w-full text-center">
+      <a href={`${linkPrefix}#kontakt`} class="btn-primary w-full text-center">
         {content.hero.cta_primary}
       </a>
     </div>
