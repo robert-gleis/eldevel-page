@@ -111,6 +111,10 @@
   /* Text Gradients */
   .text-gradient {
     @apply bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent;
+    line-height: 1.2;
+    padding: 0.1em 0;
+    -webkit-background-clip: text;
+    background-clip: text;
   }
   
   /* Navbar */
