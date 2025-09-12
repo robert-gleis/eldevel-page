@@ -11,13 +11,6 @@
   --color-border: #e5e7eb;
 }
 
-.dark {
-  --color-bg-primary: #111827;
-  --color-bg-secondary: #1f2937;
-  --color-text-primary: #f3f4f6;
-  --color-text-secondary: #d1d5db;
-  --color-border: #374151;
-}
 
 /* Base Typography & Layout */
 @layer base {
@@ -84,16 +77,16 @@
   }
   
   .btn-outline {
-    @apply btn border-2 border-current text-primary-600 hover:bg-primary-50 focus:ring-primary-500 dark:text-primary-400 dark:hover:bg-primary-900/20;
+    @apply btn border-2 border-current text-primary-600 hover:bg-primary-50 focus:ring-primary-500;
   }
   
   .btn-ghost {
-    @apply btn text-gray-600 hover:bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800;
+    @apply btn text-gray-600 hover:bg-gray-100 focus:ring-gray-500;
   }
   
   /* Card Components */
   .card {
-    @apply bg-white dark:bg-gray-800 rounded-2xl shadow-soft hover:shadow-soft-lg transition-shadow duration-300;
+    @apply bg-white rounded-2xl shadow-soft hover:shadow-soft-lg transition-shadow duration-300;
     border: 1px solid var(--color-border);
   }
   
@@ -122,13 +115,13 @@
   
   /* Navbar */
   .navbar {
-    @apply sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-gray-900/80 border-b;
+    @apply sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b;
     border-color: var(--color-border);
   }
   
   /* Mobile Menu */
   .mobile-menu {
-    @apply fixed inset-0 z-50 bg-white dark:bg-gray-900 transform transition-transform duration-300 ease-in-out;
+    @apply fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out;
   }
   
   .mobile-menu.closed {
@@ -163,22 +156,6 @@
   background: #6b7280;
 }
 
-/* Dark mode scrollbar */
-.dark .scrollbar-thin {
-  scrollbar-color: #4b5563 #1f2937;
-}
-
-.dark .scrollbar-thin::-webkit-scrollbar-track {
-  background: #1f2937;
-}
-
-.dark .scrollbar-thin::-webkit-scrollbar-thumb {
-  background: #4b5563;
-}
-
-.dark .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-  background: #6b7280;
-}
 
 /* Responsive Typography */
 @media (max-width: 640px) {

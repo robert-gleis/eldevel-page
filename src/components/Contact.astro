@@ -3,11 +3,11 @@ import { content } from '../content/de.ts';
 ---
 
 <!-- Contact Section -->
-<section id="kontakt" class="section bg-gray-50 dark:bg-gray-800/50">
+<section id="kontakt" class="section bg-gray-50">
   <div class="container-custom">
     <div class="text-center space-y-4 mb-16">
       <h2>{content.contact.headline}</h2>
-      <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
         {content.contact.subheadline}
       </p>
     </div>
@@ -26,8 +26,8 @@ import { content } from '../content/de.ts';
               </svg>
               <div>
                 <div class="font-medium">{content.contact.info.company}</div>
-                <div class="text-gray-600 dark:text-gray-300">{content.contact.info.owner}</div>
-                <div class="text-gray-600 dark:text-gray-300">
+                <div class="text-gray-600">{content.contact.info.owner}</div>
+                <div class="text-gray-600">
                   {content.contact.info.address.street}<br/>
                   {content.contact.info.address.city}, {content.contact.info.address.country}
                 </div>
@@ -56,7 +56,7 @@ import { content } from '../content/de.ts';
               <svg class="w-5 h-5 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              <span class="text-gray-600 dark:text-gray-300">{content.contact.info.hours}</span>
+              <span class="text-gray-600">{content.contact.info.hours}</span>
             </div>
           </div>
         </div>
@@ -68,7 +68,7 @@ import { content } from '../content/de.ts';
         <form action="mailto:info@eldevel.de" method="post" enctype="text/plain" class="space-y-6">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
                 {content.contact.form.name}
               </label>
               <input 
@@ -76,11 +76,11 @@ import { content } from '../content/de.ts';
                 id="name" 
                 name="name" 
                 required 
-                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               />
             </div>
             <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
                 {content.contact.form.email}
               </label>
               <input 
@@ -88,25 +88,25 @@ import { content } from '../content/de.ts';
                 id="email" 
                 name="email" 
                 required 
-                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               />
             </div>
           </div>
           
           <div>
-            <label for="company" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label for="company" class="block text-sm font-medium text-gray-700 mb-2">
               {content.contact.form.company}
             </label>
             <input 
               type="text" 
               id="company" 
               name="company" 
-              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             />
           </div>
           
           <div>
-            <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">
               {content.contact.form.subject}
             </label>
             <input 
@@ -114,12 +114,12 @@ import { content } from '../content/de.ts';
               id="subject" 
               name="subject" 
               required 
-              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             />
           </div>
           
           <div>
-            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
               {content.contact.form.message}
             </label>
             <textarea 
@@ -127,7 +127,7 @@ import { content } from '../content/de.ts';
               name="message" 
               rows="5" 
               required 
-              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             ></textarea>
           </div>
           

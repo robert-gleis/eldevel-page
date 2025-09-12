@@ -3,7 +3,7 @@ import { content } from '../content/de.ts';
 ---
 
 <!-- Legal Section -->
-<section id="rechtliches" class="section-sm bg-gray-50 dark:bg-gray-800/50">
+<section id="rechtliches" class="section-sm bg-gray-50">
   <div class="container-custom">
     <div class="text-center space-y-4 mb-12">
       <h2>Rechtliches</h2>
@@ -19,7 +19,7 @@ import { content } from '../content/de.ts';
           </svg>
         </button>
         <div id="impressum" class="accordion-content hidden card-body pt-0">
-          <div class="space-y-3 text-gray-600 dark:text-gray-300">
+          <div class="space-y-3 text-gray-600">
             <p><strong>{content.legal.imprint.content.company}</strong></p>
             <p>{content.legal.imprint.content.owner}</p>
             <p>{content.legal.imprint.content.address}</p>
@@ -40,11 +40,11 @@ import { content } from '../content/de.ts';
           </svg>
         </button>
         <div id="datenschutz" class="accordion-content hidden card-body pt-0">
-          <div class="space-y-4 text-gray-600 dark:text-gray-300">
+          <div class="space-y-4 text-gray-600">
             <p>{content.legal.privacy.intro}</p>
             {content.legal.privacy.sections.map(section => (
               <div>
-                <h4 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">{section.title}</h4>
+                <h4 class="font-semibold text-gray-900 mb-2">{section.title}</h4>
                 <p>{section.content}</p>
               </div>
             ))}

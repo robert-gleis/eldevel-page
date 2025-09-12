@@ -7,14 +7,14 @@ import { content } from '../content/de.ts';
   <div class="container-custom">
     <div class="text-center space-y-4 mb-12">
       <h2>{content.clients.headline}</h2>
-      <p class="text-lg text-gray-600 dark:text-gray-300">
+      <p class="text-lg text-gray-600">
         {content.clients.subheadline}
       </p>
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 items-center">
       {content.clients.companies.map(company => (
-        <div class="text-center p-4 rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm font-medium">
+        <div class="text-center p-4 rounded-lg bg-gray-50 text-gray-700 text-sm font-medium">
           {company}
         </div>
       ))}
