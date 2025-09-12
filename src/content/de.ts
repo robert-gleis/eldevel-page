@@ -47,39 +47,38 @@ export const content = {
     subheadline: "Komplettservice für Ihre Elektronikentwicklung",
     items: [
       {
-        title: "Feasibility & Analyse",
-        description: "Lasten- und Pflichtenheft-Erstellung, Blockschaltpläne, Risiko- und Kostenanalyse für fundierte Projektentscheidungen.",
-        icon: "search",
-      },
-      {
-        title: "CAD-Entwicklung",
-        description: "Professionelle Schaltplan-Entwicklung, PCB-Layout, Materialmanagement und Fertigungsdaten mit Altium Designer und Eagle.",
-        icon: "cpu",
-      },
-      {
         title: "Produktentwicklung",
-        description: "Ganzheitliche Entwicklung von Produkten – sowohl elektrisch als auch mechanisch abgestimmt.",
+        description: "Ganzheitliche Entwicklung von der Idee bis zum fertigen Produkt",
         icon: "cog",
+        features: [
+          {
+            name: "Feasibility & Analyse",
+            description: "Lasten- und Pflichtenheft-Erstellung, Blockschaltpläne, Risiko- und Kostenanalyse für fundierte Projektentscheidungen."
+          },
+          {
+            name: "CAD-Entwicklung",
+            description: "Professionelle Schaltplan-Entwicklung, PCB-Layout, Materialmanagement und Fertigungsdaten mit Altium Designer und Eagle."
+          },
+          {
+            name: "Redesign & Optimierung",
+            description: "Optimierung bestehender Designs durch Erkenntnisse aus Tests, Kostenoptimierung und Verbesserungen."
+          },
+          {
+            name: "Produktbegleitung",
+            description: "Qualitäts-, Termin- und Produktionsüberwachung, Feldfeedback-Integration und Reparaturservice."
+          }
+        ]
       },
       {
         title: "Kleinserienfertigung",
-        description: "Fertigung von Kleinserien mit höchster Qualität und Präzision für Ihre speziellen Anforderungen.",
+        description: "Fertigung von Kleinserien mit höchster Qualität und Präzision",
         icon: "factory",
-      },
-      {
-        title: "Prototyping & Tests",
-        description: "Prototypenbau, Testsysteme, Inbetriebnahme, Fehleranalyse sowie EMV- und HALT-Tests.",
-        icon: "beaker",
-      },
-      {
-        title: "Redesign & Optimierung",
-        description: "Optimierung bestehender Designs durch Erkenntnisse aus Tests, Kostenoptimierung und Verbesserungen.",
-        icon: "refresh",
-      },
-      {
-        title: "Produktbegleitung",
-        description: "Qualitäts-, Termin- und Produktionsüberwachung, Feldfeedback-Integration und Reparaturservice.",
-        icon: "shield",
+        features: [
+          {
+            name: "Prototyping & Tests",
+            description: "Prototypenbau, Testsysteme, Inbetriebnahme, Fehleranalyse sowie EMV- und HALT-Tests."
+          }
+        ]
       }
     ]
   },
