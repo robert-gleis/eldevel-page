@@ -1,5 +1,13 @@
 ---
 import { content } from '../content/de.ts';
+
+// Helper function to build correct asset paths
+const getAssetPath = (path: string) => {
+  const baseUrl = import.meta.env.BASE_URL;
+  // Remove trailing slash from baseUrl if it exists
+  const cleanBaseUrl = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+  return cleanBaseUrl + '/' + (path.startsWith('/') ? path.slice(1) : path);
+};
 ---
 
 <!-- Clients Section -->
@@ -12,10 +20,26 @@ import { content } from '../content/de.ts';
       </p>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 items-center">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
       {content.clients.companies.map(company => (
-        <div class="text-center p-4 rounded-lg bg-gray-50 text-gray-700 text-sm font-medium">
-          {company}
+        <div class="flex items-center justify-center p-6 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow duration-300 group">
+          {company.logo === 'placeholder.png' ? (
+            <div class="text-center">
+              <div class="w-full h-16 bg-gray-100 rounded-lg flex items-center justify-center mb-2">
+                <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
+              </div>
+              <span class="text-xs text-gray-600 font-medium">{company.name}</span>
+            </div>
+          ) : (
+            <img 
+              src={getAssetPath(`images/${company.logo}`)}
+              alt={company.alt}
+              class="max-w-full max-h-16 w-auto h-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+              loading="lazy"
+            />
+          )}
         </div>
       ))}
     </div>

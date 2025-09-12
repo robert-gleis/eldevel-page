@@ -120,13 +120,66 @@ export const content = {
     headline: "Unsere Kunden",
     subheadline: "Vertrauen etablierter Unternehmen",
     companies: [
-      "WES GmbH",
-      "Wisotec GmbH", 
-      "Coherent GmbH",
-      "Hochschule Flensburg",
-      "Thorlabs GmbH",
-      "Flügel GmbH",
-      "Trident GmbH"
+      {
+        name: "Coherent GmbH",
+        logo: "Coherent.png",
+        alt: "Coherent GmbH Logo"
+      },
+      {
+        name: "Flügel GmbH",
+        logo: "Fluegel_logo.png",
+        alt: "Flügel GmbH Logo"
+      },
+      {
+        name: "Hochschule Flensburg",
+        logo: "FH Flensburg_Logo_color_schrift_grau_72dpi-320px.png",
+        alt: "Hochschule Flensburg Logo"
+      },
+      {
+        name: "Industriekonzeptakademie",
+        logo: "IndustrieKonzeptakademie.gif",
+        alt: "Industriekonzeptakademie Logo"
+      },
+      {
+        name: "Mandarien Medien",
+        logo: "Mandarien Medien.png",
+        alt: "Mandarien Medien Logo"
+      },
+      {
+        name: "Medizinisches Laserzentrum Lübeck",
+        logo: "Medizienes_Laserzentrum_Luebeck.png",
+        alt: "Medizinisches Laserzentrum Lübeck Logo"
+      },
+      {
+        name: "THW - Flensburg",
+        logo: "THW FL.png",
+        alt: "THW Flensburg Logo"
+      },
+      {
+        name: "Thorlabs GmbH",
+        logo: "Thorlabs.jpg",
+        alt: "Thorlabs GmbH Logo"
+      },
+      {
+        name: "Trident GmbH",
+        logo: "Trident.png",
+        alt: "Trident GmbH Logo"
+      },
+      {
+        name: "Visotec GmbH",
+        logo: "Visotec-Logo-final_HE_rgb_2025-scaled.jpg",
+        alt: "Visotec GmbH Logo"
+      },
+      {
+        name: "WES Energy GmbH",
+        logo: "20210211_WES-energy_300px.png",
+        alt: "WES Energy GmbH Logo"
+      },
+      {
+        name: "WES Smart Power Electronics GmbH",
+        logo: "20210211_WES-smartpower_300px.png",
+        alt: "WES Smart Power Electronics GmbH Logo"
+      }
     ]
   },
   
