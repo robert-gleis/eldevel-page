@@ -4,7 +4,7 @@
 export const content = {
   meta: {
     title: "eldevel – Electronics Development | Hans-Jürgen Rode",
-    description: "Professionelle Elektronik-Entwicklung von der Idee bis zur Serie. PCB-Design, Prototyping, Tests und Produktbegleitung. 20+ Jahre Erfahrung.",
+    description: "Professionelle Elektronik-Entwicklung von Einzelplatinen bis zur Kleinserie. PCB-Design, Prototyping, Tests und Produktbegleitung. 20+ Jahre Erfahrung.",
     keywords: "Elektronik, PCB, Leiterplatten, Entwicklung, Prototyping, Altium Designer, Eagle, EMV, Tests",
   },
   
@@ -19,7 +19,7 @@ export const content = {
   
   hero: {
     headline: "Elektronik-Entwicklung, die Produkte voranbringt.",
-    subheadline: "Von der Idee bis zur Serie – Schaltung, PCB-Layout, Prototyping, Tests und Produktbegleitung.",
+    subheadline: "Von Einzelplatinen bis zur Kleinserie – Schaltung, PCB-Layout, Prototyping, Tests und Produktbegleitung.",
     cta_primary: "Projekt anfragen",
     cta_secondary: "Leistungen ansehen",
   },
@@ -27,7 +27,7 @@ export const content = {
   about: {
     headline: "Über eldevel",
     subheadline: "Ihr Partner für professionelle Elektronik-Entwicklung",
-    intro: "Als erfahrener Elektronikentwickler unterstütze ich Sie bei der Realisierung Ihrer Elektronikprojekte – von der ersten Idee bis zur erfolgreichen Markteinführung.",
+    intro: "Als erfahrener Elektronikentwickler unterstütze ich Sie bei der Realisierung Ihrer Elektronikprojekte – von Einzelplatinen bis zur Kleinserie, von der ersten Idee bis zur erfolgreichen Markteinführung.",
     experience: {
       title: "Hans-Jürgen Rode",
       subtitle: "Elektronikentwicklung seit 2011",
@@ -49,7 +49,7 @@ export const content = {
       {
         title: "Produktentwicklung",
         description: "Ganzheitliche Entwicklung von der Idee bis zum fertigen Produkt",
-        icon: "cog",
+        icon: "factory",
         features: [
           {
             name: "Feasibility & Analyse",
@@ -70,10 +70,15 @@ export const content = {
         ]
       },
       {
-        title: "Kleinserienfertigung",
-        description: "Fertigung von Kleinserien mit höchster Qualität und Präzision",
-        icon: "factory",
+        title: "Leiterkartenbestückung",
+        description: "Prototyping, Tests und Fertigung von Kleinserien mit höchster Qualität und Präzision",
+        icon: "cog",
         features: [
+          {
+            name: "Kleinserien",
+            description: "Fertigung von Einzelplatinen bis zu Kleinserien mit höchster Qualität und Präzision."
+          },
+
           {
             name: "Prototyping & Tests",
             description: "Prototypenbau, Testsysteme, Inbetriebnahme, Fehleranalyse sowie EMV- und HALT-Tests."
