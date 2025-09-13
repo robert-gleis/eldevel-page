@@ -13,6 +13,6 @@ export default defineConfig({
 		tailwind()
 	],
 	image: {
-		domains: ['eldevel.de', 'www.eldevel.de'],
+		domains: ['eldevel.de'],
 	},
 });
