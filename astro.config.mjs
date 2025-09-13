@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://www.eldevel.de',
+	site: 'https://eldevel.de',
 	base: '/',
 	output: 'static',
 	integrations: [
@@ -13,6 +13,6 @@ export default defineConfig({
 		tailwind()
 	],
 	image: {
-		domains: ['www.eldevel.de'],
+		domains: ['eldevel.de', 'www.eldevel.de'],
 	},
 });
